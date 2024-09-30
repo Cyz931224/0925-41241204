@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4x4 翻牌遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="options">
+        <label><input type="radio" name="display-time" value="5000" checked> 5 秒</label>
+        <label><input type="radio" name="display-time" value="10000"> 10 秒</label>
+        <label><input type="radio" name="display-time" value="20000"> 20 秒</label>
+    </div>
+
+    <div id="difficulty-options">
+        <label><input type="radio" name="difficulty" value="easy" checked> 簡單</label>
+        <label><input type="radio" name="difficulty" value="normal"> 普通</label>
+        <p id="normal-mode-description" style="display: none;">普通模式下只能翻錯三次！</p>
+    </div>
+
+    <div id="type-options">
+        <label><input type="radio" name="card-type" value="animals" checked> 動物</label>
+        <label><input type="radio" name="card-type" value="people"> 人物</label>
+    </div>
+
+    <button id="start-button" style="display: block; margin: 20px auto;">開始遊戲</button>
+    <div id="game-board" style="display: none;"></div>
+    <div id="congrats-message" class="hidden">恭喜通關！<br><button id="restart-button">重新開始</button></div>
+    <div id="game-over-message" class="hidden" style="color: red;">失敗了，下次再加油！<br><button id="restart-button-fail">重新開始</button></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
